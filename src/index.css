@@ -12,3 +12,25 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.topmenu
+{
+  margin-bottom: 5px;
+  padding: 5px 10px 10px;
+  border-bottom: 1px dashed gray;
+}
+
+.topmenu .link
+{
+  margin-right: 10px;
+}
+
+.container
+{
+  padding: 10px;
+}
+
+.dropdown_link
+{
+  cursor: pointer;
+}
