@@ -34,3 +34,9 @@ code {
 {
   cursor: pointer;
 }
+
+.form_field
+{
+  margin-right: 5px;
+  padding: 0 5px;
+}

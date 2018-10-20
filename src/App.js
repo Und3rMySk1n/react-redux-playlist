@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Topmenu from './Topmenu';
 import Dropdown from './Dropdown';
+import RegistrationForm from './RegistrationForm';
 
 const topMenuItems = [
     {
@@ -23,7 +24,8 @@ class App extends Component {
             <div>
                 <Topmenu items={topMenuItems} />
                 <div className={'container'}>
-                    <Dropdown/>
+                    <Dropdown />
+                    <RegistrationForm />
                 </div>
             </div>
         );
