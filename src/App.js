@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Topmenu from './Topmenu';
-import Dropdown from './Dropdown';
-import RegistrationForm from './RegistrationForm';
+import Topmenu from './Topmenu/Topmenu';
+import Dropdown from './Dropdown/Dropdown';
+import RegistrationForm from './RegistrationForm/RegistrationForm';
 
 const topMenuItems = [
     {
