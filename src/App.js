@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import Topmenu from './Topmenu';
 import Dropdown from './Dropdown';
 

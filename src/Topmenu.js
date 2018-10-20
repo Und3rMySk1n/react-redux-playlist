@@ -1,6 +1,16 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class Topmenu extends Component {
+    static propTypes = {
+       items: PropTypes.arrayOf(
+           PropTypes.shape({
+               link: PropTypes.string.isRequired,
+               title: PropTypes.string.isRequired
+           })
+       )
+    };
+
     render() {
         return (
             <div className={'topmenu'}>
