@@ -6,8 +6,7 @@ const List = ({items}) => {
         <div className={'items_list'}>
             {
                 items.map((item, i) => {
-                    const itemClass = `list_item${(item.active) ? ' active' : ''}`;
-                    return <li key={i} className={itemClass}>{item.text}</li>
+                    return <li key={i} className={'list_item'}>{item}</li>
                 })
             }
         </div>

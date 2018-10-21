@@ -6,17 +6,18 @@ class RegistrationForm extends Component {
         super();
 
         this.state = {
-            email: ''
+            value: ''
         };
     }
 
     _onSubmit(event) {
         event.preventDefault();
-        console.log(`Email value: ${this.state.email}`);
+        this.props.onSubmit(this.state.value);
+        this.setState({value: ''});
     }
 
-    _onEmailChange(email) {
-        this.setState({email});
+    _onValueChange(value) {
+        this.setState({value});
     }
 
     render() {
@@ -27,11 +28,11 @@ class RegistrationForm extends Component {
                     <input
                         className={'form_field'}
                         type='text'
-                        placeholder='Enter email'
-                        value={this.state.email}
-                        onChange={(event) => this._onEmailChange(event.target.value)}
+                        placeholder='Enter track name'
+                        value={this.state.value}
+                        onChange={(event) => this._onValueChange(event.target.value)}
                     />
-                    <button type='submit'>Submit</button>
+                    <button type='submit'>Add track</button>
                 </form>
             </div>
         );
