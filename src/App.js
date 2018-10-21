@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Topmenu from './Topmenu/Topmenu';
 import Dropdown from './Dropdown/Dropdown';
 import RegistrationForm from './RegistrationForm/RegistrationForm';
+import List from './List/List';
 
 const topMenuItems = [
     {
@@ -18,6 +19,17 @@ const topMenuItems = [
     }
 ];
 
+const listItems = [
+    {
+        text: 'That is one of those days',
+        active: false
+    },
+    {
+        text: 'When you do not want to wake up',
+        active: true
+    }
+];
+
 class App extends Component {
     render() {
         return (
@@ -27,6 +39,7 @@ class App extends Component {
                     <Dropdown />
                     <RegistrationForm />
                 </div>
+                <List items={listItems} />
             </div>
         );
     }
