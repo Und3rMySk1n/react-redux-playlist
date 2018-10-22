@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import './registration_form.css';
+import './add_track_form.css';
 
-class RegistrationForm extends Component {
+class AddTrackForm extends Component {
     constructor() {
         super();
 
@@ -39,4 +39,4 @@ class RegistrationForm extends Component {
     }
 }
 
-export default RegistrationForm;
+export default AddTrackForm;

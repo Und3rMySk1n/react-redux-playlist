@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import Topmenu from './Topmenu/Topmenu';
-import Dropdown from './Dropdown/Dropdown';
-import RegistrationForm from './RegistrationForm/RegistrationForm';
-import List from './List/List';
+import Topmenu from './Topmenu/';
+import Dropdown from './Dropdown/';
+import AddTrackForm from './AddTrackForm/';
+import List from './List/';
 import { connect } from 'react-redux';
 
 const topMenuItems = [
@@ -32,7 +32,7 @@ class App extends Component {
                 <Topmenu items={topMenuItems} />
                 <div className={'container'}>
                     <Dropdown />
-                    <RegistrationForm onSubmit={(value) => {this._onFormSubmit(value)}} />
+                    <AddTrackForm onSubmit={(value) => {this._onFormSubmit(value)}} />
                 </div>
                 <List items={this.props.tracks} />
             </div>
