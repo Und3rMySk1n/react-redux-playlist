@@ -5,22 +5,12 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import {createStore} from 'redux';
 import {Provider} from 'react-redux';
+import reducer from './reducers/';
 
-function getPlaylist(state = [], action) {
-    if (action.type === 'ADD_TRACK') {
-        return [
-            ...state,
-            action.payload
-        ];
-    }
-    return state;
-}
-
-const store = createStore(getPlaylist);
-store.dispatch({
-    type: 'ADD_TRACK',
-    payload: 'Freak on a leash'
-});
+const store = createStore(
+    reducer,
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
 
 ReactDOM.render(
     <Provider store={store}>

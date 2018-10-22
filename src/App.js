@@ -34,7 +34,7 @@ class App extends Component {
                     <Dropdown />
                     <RegistrationForm onSubmit={(value) => {this._onFormSubmit(value)}} />
                 </div>
-                <List items={this.props.appStore} />
+                <List items={this.props.tracks} />
             </div>
         );
     }
@@ -42,7 +42,7 @@ class App extends Component {
 
 export default connect(
     state => ({
-        appStore: state
+        tracks: state.tracks
     }),
     dispatch => ({
         addTrack: (trackName) => {
