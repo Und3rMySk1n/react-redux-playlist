@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './add_track_form.css';
+import './form.css';
 
 class AddTrackForm extends Component {
     constructor() {
@@ -10,6 +10,23 @@ class AddTrackForm extends Component {
         };
     }
 
+    render() {
+        return (
+            <div>
+                <form onSubmit={(event) => this._onSubmit(event)}>
+                    <input
+                        className={'form_field'}
+                        type='text'
+                        placeholder={this.props.placeholder}
+                        value={this.state.value}
+                        onChange={(event) => this._onValueChange(event.target.value)}
+                    />
+                    <button type='submit'>{this.props.buttonText}</button>
+                </form>
+            </div>
+        );
+    }
+
     _onSubmit(event) {
         event.preventDefault();
         this.props.onSubmit(this.state.value);
@@ -18,24 +35,6 @@ class AddTrackForm extends Component {
 
     _onValueChange(value) {
         this.setState({value});
-    }
-
-    render() {
-        return (
-            <div>
-                <h2>Registration form</h2>
-                <form onSubmit={(event) => this._onSubmit(event)}>
-                    <input
-                        className={'form_field'}
-                        type='text'
-                        placeholder='Enter track name'
-                        value={this.state.value}
-                        onChange={(event) => this._onValueChange(event.target.value)}
-                    />
-                    <button type='submit'>Add track</button>
-                </form>
-            </div>
-        );
     }
 }
 
