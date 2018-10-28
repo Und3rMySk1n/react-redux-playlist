@@ -6,6 +6,8 @@ export default function getTracks(state = initialState, action) {
             ...state,
             action.payload
         ];
+    } else if (action.type === 'LOAD_TRACKS') {
+        return action.payload;
     }
     return state;
 }

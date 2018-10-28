@@ -3,6 +3,7 @@ import Topmenu from './Topmenu/';
 import Dropdown from './Dropdown/';
 import Form from './Form/';
 import List from './List/';
+import { loadTracksFromServer } from './Actions/tracks';
 import { connect } from 'react-redux';
 
 const topMenuItems = [
@@ -39,6 +40,7 @@ class App extends Component {
                         buttonText={'Find'}
                         onSubmit={(value) => {this._onFindTrackFormSubmit(value)}}
                     />
+                    <button onClick={this.props.loadTracks}>Get tracks from server</button>
                 </div>
                 <List items={this._prepareFilteredTracks()} />
             </div>
@@ -75,6 +77,9 @@ export default connect(
                 type: 'FIND_TRACK',
                 payload: filter
             })
+        },
+        loadTracks: () => {
+            dispatch(loadTracksFromServer());
         }
     })
 )(App);
